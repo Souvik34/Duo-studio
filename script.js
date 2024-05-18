@@ -84,17 +84,31 @@ page2Animation()
 
 function page4Animation() {
     gsap.from(".elem h1", {
-        y:120,
+        y:820,
         stagger: 0.2,
         duration: 1,
         scrollTrigger: {
             trigger: '#page4',
             scroller: "#main",
-            start: "top 40%",
-            end: "top 37%",
+            start: "top 50%",
+            end: "top 50%",
             // markers: true,
             scrub: 2
         }
     })
 }
 page4Animation()
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
